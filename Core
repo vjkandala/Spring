@@ -1,23 +1,27 @@
 
 Important Concepts in Spring Core : 
+
+Spring - Spring is lightweight solution for building enterprise application using POJO. 
+         It can be used in servlet container (e.g. Tomcat server) and doesn't require an Application server.
  
- a. Dependency Injection - No Two classes shouldnt be depedent to each other by using new Operator.Need to 
-    achieve loose coupling between.By using Spring Depedency Injection we can achieve Loose coupling between them.
-    application classes should be as independent as possible of other Java classes to increase the possibility to reuse these 
-    classes and to test them independently of other classes while unit testing. 
+ a. Dependency Injection - 
+    No Two classes shouldn't be depedent to each other.
+    Need to achieve loose coupling between the classes using Spring DI.
+    Instance of the service Implementation injected via setter/Constructor to target Object.(Reverse Way)
     
-    Dependency Injection (or sometime called wiring) helps in gluing these classes together and at the same time keeping them independent.
- 
- b. Inversion of Control - Inversion of control (IoC) is a programming technique in which object coupling is bound at run time 
-   by an assembler object and is typically not known at compile time using static analysis. In traditional programming, 
-   the flow of the business logic is determined by objects that are statically assigned to one another. 
-   With inversion of control, the flow depends on the object graph that is instantiated by the assembler and is made possible by 
-   object interactions being defined through abstractions. The binding process is achieved through "dependency injection".
-   Inversion of control is a design paradigm with the goal of giving more control to the targeted components of your application, 
-   the ones that are actually doing the work.
+ b. Inversion of Control - 
+    Inversion of control (IoC) is a programming technique in which object coupling is bound at run time 
+    by an assembler object and is typically not known at compile time using static analysis.
+    
+    Example : 
+    
+  
+    
+    
+    
    
    References : 
-   https://howtodoinjava.com/interview-questions/top-spring-core-interview-questions-with-answers/#ioc_di
+   ** https://howtodoinjava.com/interview-questions/top-spring-core-interview-questions-with-answers/#ioc_di
    https://www.tutorialspoint.com/spring/spring_dependency_injection.htm
    ** http://www.logicbig.com/tutorials/spring-framework/spring-core/quick-start/
    http://www.vogella.com/tutorials/SpringDependencyInjection/article.html
