@@ -15,9 +15,55 @@ Spring - Spring is lightweight solution for building enterprise application usin
     
     Example : 
     
+    Interface : 
+    public interface HelloWorldInterface {
+    void sayHello();
+    }
   
+           Implementation :
+           public class HelloWorldImpl implements HelloWorldInterface {
+             @Override public void sayHello() {
+                 System.out.println("Hello, I am in Hello");
+             }
+          }
+          
+          Client : 
+                    public class HelloWorldClient {
+
+                      @Autowired
+                      HelloWorldImpl helloWorld;
+
+                      public void sayHello(){
+                          helloWorld.sayHello();;
+                      }
+                  }        
+
+
+   
+              Config :
     
-    
+                    @Configuration
+                   public class config {
+
+                      @Bean
+                      public HelloWorldImpl getHelloWorldImpl(){
+                          return new HelloWorldImpl();
+                      }
+
+                      @Bean
+                      public HelloWorldClient getHelloWorldClient(){
+                          return new HelloWorldClient();
+                      }
+
+                      public static void main(String args[]){
+                          AnnotationConfigApplicationContext context =
+                                  new AnnotationConfigApplicationContext(config.class);
+                          HelloWorldClient client =  context.getBean(HelloWorldClient.class);
+                          client.sayHello();
+                      }
+                  }
+
+
     
    
    References : 
